@@ -302,10 +302,22 @@ header .links ul li:not(:last-child) a {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+@media (max-width: 991.99px) {
+    .about .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
 .about .about-content .image {
     position: relative;
     width: 270px;
     height: 375px;
+}
+@media (max-width: 991.99px) {
+    .about .about-content .image {
+        margin: 0 auto 60px
+    }
+    
 }
 .about .about-content .image::before {
     content: "";
@@ -327,6 +339,12 @@ header .links ul li:not(:last-child) a {
     top: -40px;
     right: -150px;
     z-index: -1;
+}
+@media (max-width: 991.99px) {
+    .about .about-content .image::before,
+    .about .about-content .image::after {
+        display: none;
+    }
 }
 .about .about-content .image img {
     max-width: 100%;
